@@ -1,2 +1,5 @@
-console.log(`Hello, ${ process.argv[2] }!
-Your name lowercased is "${ process.argv[2].toLowerCase() }".`)
+var inputs = process.argv.slice(2)
+  , result = inputs.map(item => item[0])
+                   .reduce((previousLetter, letter) => previousLetter.concat(letter))
+
+console.log(`[${ inputs }] becomes "${ result }"`)                          
