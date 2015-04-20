@@ -1,3 +1,4 @@
-var inputs = process.argv.slice(2)
-
-console.log(`The minimum of [${inputs}] is ${Math.min(...inputs)}`)                          
+module.exports = function average(...numbers) {
+  var total = numbers.reduce((previous, current) => previous + current)
+  return total / numbers.length
+}
