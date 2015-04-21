@@ -1,5 +1,3 @@
-var inputs = process.argv.slice(2)
-  , result = inputs.map(item => item[0])
-                   .reduce((previousLetter, letter) => previousLetter.concat(letter))
-
-console.log(`[${ inputs }] becomes "${ result }"`)                          
+module.exports = function midpoint(lower=0, upper=1) {
+  return (lower + upper) / 2
+}
